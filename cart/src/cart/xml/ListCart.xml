@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cart.xml.ListCart">
+	<select id="ListBaseball" resultType="baseball">
+		SELECT * FROM BASEBALL
+	</select>
+	
+	<select id="infoSel" parameterType="java.lang.String" resultType="baseball">
+		SELECT * FROM BASEBALL
+		WHERE PNAME=#{pname}
+	</select>
+	
+	<select id="CartList" parameterType="java.lang.String" resultType="baseball">
+		SELECT * FROM BASEBALL
+		WHERE PNAME=#{pname}
+	</select>
+</mapper>
