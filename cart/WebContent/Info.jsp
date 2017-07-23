@@ -12,18 +12,39 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 
 <title>eCommerce Product Detail</title>
-<link
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
-	rel="stylesheet">
-<link href="/cart/css/Info.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<link href="/cart/css/Info.css" rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
- 
-	<div class="container">
+<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+							Your Account</a></li>
+					<li><a href="#"><span
+							class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
@@ -32,31 +53,31 @@
 						<div class="preview-pic tab-content">
 							<div class="tab-pane active" id="pic-1">
 								<img src="/cart/baseball/${infoSel.picture }" alt="Image"
-									style="width: 400px; height: 300px; margin-right: 50px;"/>
+									style="width: 580px; height: 530px; margin-right: 50px;"/>
 							</div>
 						</div>
 
 
 					</div>
-					<form action="CartList.do?cmd=cartlist" method="post">
 						<div class="details col-md-6">
-							<h3 class="product-title">이름: ${infoSel.pname }</h3>
+					<form action="CartList.do?cmd=cartlist" method="post" style="margin-top: 100px">
+						<h3 class="product-title">이름: ${infoSel.pname }</h3>
 
-							<p class="product-description"></p>
-							<h4 class="price">
-								가격: <span>${infoSel.price } 원</span>
-							</h4>
-							<h5 class="colors">회사명: ${infoSel.pcompany }</h5>
-							<h5 class="colors">원산지: ${infoSel.porigin }</h5>
-							<div class="action">
-								<input type="hidden" name="pname" value="${infoSel.pname }">
-								<input class="btn btn-default" type="submit" value="장바구니 추가">
-							</div>
+						<p class="product-description"></p>
+						<h4 class="price">
+							가격: <span>${infoSel.price } 원</span>
+						</h4>
+						<h5 class="colors">회사명: ${infoSel.pcompany }</h5>
+						<h5 class="colors">원산지: ${infoSel.porigin }</h5>
+						<div class="action">
+							<input type="hidden" name="pname" value="${infoSel.pname }">
+							<input class="btn btn-default" type="submit" value="장바구니 추가">
 						</div>
 					</form>
 				</div>
+				</div>
 			</div>
 		</div>
-	</div>
+
 </body>
 </html>
