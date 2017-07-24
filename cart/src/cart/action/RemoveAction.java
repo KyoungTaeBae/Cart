@@ -30,7 +30,7 @@ public class RemoveAction implements Action{
 	@Override
 	public ActionForWard execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
-		ArrayList<baseballBean>list=(ArrayList<baseballBean>) request.getSession().getAttribute("list");
+		ArrayList<baseballBean>list=(ArrayList<baseballBean>) request.getSession().getAttribute("list2");
 		int index=Integer.parseInt(request.getParameter("index"));
 		list.remove(index);
 		request.getSession().setAttribute("list", list);

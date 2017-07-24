@@ -11,13 +11,7 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <link href="/cart/css/login.css" rel="stylesheet"> 
 </head>
-<body>
-
-	<%
-       ArrayList<baseballBean> list=new ArrayList<baseballBean>();
-       request.getSession().setAttribute("list", list);
-	%>
-	
+<body>	
     <div class="container">
         <div class="card card-container">
     

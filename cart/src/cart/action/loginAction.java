@@ -1,7 +1,10 @@
 package cart.action;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 
+import cart.bean.baseballBean;
 import cart.control.ActionForWard;
 import cart.dao.ListDao;
 
@@ -24,6 +27,8 @@ public class loginAction implements Action{
 	public ActionForWard execute(HttpServletRequest request) {
 		// TODO Auto-generated method stub
 		request.setAttribute("list", dao.ListBaseball());
+		ArrayList<baseballBean> list2=new ArrayList<baseballBean>();
+	    request.getSession().setAttribute("list2", list2);
 		return new ActionForWard(path,redirect);
 	}
 	
